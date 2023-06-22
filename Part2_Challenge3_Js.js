@@ -33,3 +33,41 @@ const johnObject = {
 console.log(johnObject.BMIValue());
 console.log(markObject.BMIValue());
 console.log(`${johnObject.BMIValue() > markObject.BMIValue() ? `John's BMI ${johnObject.BMIValue()} is higher than Mark's ${markObject.BMIValue()}` : `Mark's BMI ${markObject.BMIValue()} is higher than John's ${johnObject.BMIValue()}`}`)
+
+
+/*Second Way of write
+    const markObject = {
+    firstName: 'Mark',
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    BMIValue: function () {
+        //return (this.mass / (this.height ** 2));
+        this.bmi = (this.mass / (this.height ** 2));
+        return this.bmi;
+    }
+}
+const johnObject = {
+    firstName: 'John',
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    BMIValue: function () {
+        //return (this.mass / (this.height * this.height));
+        this.bmi = (this.mass / (this.height ** 2));
+        return this.bmi;
+    }
+}
+console.log(johnObject.BMIValue());
+console.log(markObject.BMIValue());
+console.log(`Just using the Mark BMI instead of calling the property of object ${markObject.bmi}`);
+console.log(`Just using the John BMI instead of calling the property of object ${johnObject.bmi}`);
+//console.log(`${johnObject.BMIValue() > markObject.BMIValue() ? `John's BMI ${johnObject.BMIValue()} is higher than Mark's ${markObject.BMIValue()}` : `Mark's BMI ${markObject.BMIValue()} is higher than John's ${johnObject.BMIValue()}`}`)
+
+console.log("Above i have used Ternary operator.Below is the second way of calling the object proprty which is actually a function");
+if (markObject.bmi > johnObject.bmi) {
+    console.log(`${markObject.fullName}'s BMI (${markObject.bmi}) is higher than ${johnObject.fullName}'s BMI (${johnObject.bmi})`);
+} else if (johnObject.bmi > markObject.bmi) {
+    console.log(`${johnObject.fullName}'s BMI (${johnObject.bmi}) is higher than ${markObject.fullName}'s BMI (${markObject.bmi})`);
+}
+*/
